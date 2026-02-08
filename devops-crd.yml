@@ -1,0 +1,38 @@
+kind: CustomResourceDefinition
+apiVersion: apiextensions.k8s.io/v1
+metadata:
+  name: devopsbatches.trainwithrehman.com
+spec:
+  group: trainwithrehman.com
+  names: 
+    plural: devopsbatches
+    singular: devopsbatch
+    kind: DevOpsBatch
+    shortNames:
+      - rehman
+      - cvc
+      - pra
+  scope: Namespaced
+  versions:
+  - name: v1
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties: 
+          spec:
+            type: object
+            properties:
+              name: 
+                type: string
+                description: "This is rehman batch"
+              duration:
+                type: string
+                description: "Duration is four weeks"
+              mode:
+                type: string
+                description: "This is live batch"
+              platform:
+                type: string
+                description: "Youtube"

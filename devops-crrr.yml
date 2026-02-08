@@ -1,0 +1,9 @@
+kind: DevOpsBatch
+apiVersion: trainwithrehman.com/v1
+metadata:
+  name: rehman-batch-9
+spec:
+  name: DevOps Zero to Hero
+  duration: 4 weeks from 8th feb
+  platform: Youtube
+  mode: Live
