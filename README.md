@@ -1,31 +1,35 @@
-# Kubernetes Custom Resource Definition (CRD)
+# 🧱 Kubernetes Custom Resource Definition (CRD)
 
-[![Kubernetes Version](https://img.shields.io/badge/Kubernetes-1.24+-green.svg?style=flat-square)](https://kubernetes.io/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
 
-This project demonstrates creating and managing **Custom Resource Definitions (CRDs)** in Kubernetes.
+Extends the Kubernetes API with a custom resource: **`DevOpsBatch`** (`devopsbatches.trainwithrehman.com`).
 
----
+## 📁 Files
 
-## 🚀 Features
+| File | Purpose |
+|---|---|
+| `devops-crd.yml` | Defines the `DevOpsBatch` CRD (group `trainwithrehman.com`, version `v1`) |
+| `devops-crrr.yml` | A custom resource instance of `DevOpsBatch` |
 
-- Define your **own Kubernetes resources**.
-- Integrate seamlessly with Kubernetes API.
-- Extend Kubernetes for **custom controllers or operators**.
-- Ideal for **cloud-native applications**.
-
----
-
-## 🛠 Prerequisites
-
-- Kubernetes cluster (local, cloud, or KIND)
-- `kubectl` installed and configured
-
----
-
-## ⚡ Installation
-
-Apply the CRD:
+## 🚀 Usage
 
 ```bash
-kubectl apply -f crd.yaml
+kubectl apply -f devops-crd.yml
+kubectl get crd devopsbatches.trainwithrehman.com
+
+kubectl apply -f devops-crrr.yml
+kubectl get devopsbatches
+kubectl describe devopsbatches
+```
+
+## 💡 Why CRDs matter
+
+CRDs are the foundation of **operators** (Argo CD, cert-manager, Prometheus Operator): you define a resource, and a controller reconciles it.
+
+---
+
+## 👤 Author
+
+**Abdur Rehman** · DevSecOps Engineer · Founder of [ARTechOps](https://artechops.com)
+
+[LinkedIn](https://www.linkedin.com/in/muhamad-abdur-rehman-81777b366/) · [GitHub](https://github.com/abdur-rehman-tech) · [artechops.com](https://artechops.com)
